@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:mso="urn:schemas-microsoft-com:office:office"
+    xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
+
+<head>
+    <style type="text/css">
+        body {
+            text-align: center;
+        }
+
+        input[type="text"] {
+            width: 150px;
+            height: 30px;
+        }
+
+        .colorTest {
+            background-color: aqua;
+        }
+
+        .perso {
+            height: 300px;
+            background-color: rgb(8, 8, 8);
+            color: rgb(231, 5, 5);
+            border: 0px;
+            width: 300px;
+            font-size: 50px;
+        }
+
+        .vermelho {
+            background-color: brown;
+        }
+
+        .branco {
+            background-color: chartreuse;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <ol>
+            <button id="botao" cor='' value="" class="perso"></button>
+            <button id="botao" cor='' value="" class="perso"></button>
+            <button id="botao" cor='' value="" class="perso"></button>
+            <button id="botao" cor='' value="" class="perso"></button>
+            <button id="botao" cor='' value="" class="perso"></button>
+        </ol>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script>
+        $(Document).ready(function () {
+            $('button').click(function () { // realiza uma funcao quando o botao e clicado
+               
+                let valor = $(this).hasClass('vermelho'); //hasclass retorna verdadeiro ou falso
+
+                if (valor == true) {            
+                    $(this).toggleClass('branco'); //vai alternar entre a cor personalizada e a ultima 
+                } else {
+                    $(this).toggleClass('vermelho'); //vai alternar entre a cor personalizada e a ultima 
+                }
+            }); //hasclass
+        });
+    </script>
+</body>
+
+</html>
